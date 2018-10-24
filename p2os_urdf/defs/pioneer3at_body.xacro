@@ -368,9 +368,9 @@
 
     </xacro:macro>
 
-
     <xacro:macro name="p3at_gazebo_ext">
 
+    
         <gazebo>
             <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
                 <updateRate>100.0</updateRate>
@@ -382,12 +382,12 @@
                 <wheelSeparation>0.4</wheelSeparation>
                 <wheelDiameter>0.215</wheelDiameter>
                 <robotBaseFrame>base_link</robotBaseFrame>
-                <torque>200</torque>
+                <torque>0.1</torque>
                 <topicName>cmd_vel</topicName>
             </plugin>
         </gazebo>
 
-    </xacro:macro>
+    </xacro:macro> 
 
     <xacro:macro name="velodyne">
         <xacro:include filename="$(find velodyne_description)/urdf/VLP-16.urdf.xacro"/>
