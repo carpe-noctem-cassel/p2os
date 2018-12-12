@@ -382,7 +382,7 @@
                 <wheelSeparation>0.4</wheelSeparation>
                 <wheelDiameter>0.215</wheelDiameter>
                 <robotBaseFrame>base_link</robotBaseFrame>
-                <torque>0.1</torque>
+                <torque>20</torque>
                 <topicName>cmd_vel</topicName>
             </plugin>
         </gazebo>
