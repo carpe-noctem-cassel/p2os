@@ -383,6 +383,7 @@
                 <wheelDiameter>0.215</wheelDiameter>
                 <robotBaseFrame>base_link</robotBaseFrame>
                 <torque>20</torque>
+                <broadcastTF>true</broadcastTF>
                 <topicName>cmd_vel</topicName>
             </plugin>
         </gazebo>
