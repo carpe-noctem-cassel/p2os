@@ -368,9 +368,7 @@
 
     </xacro:macro>
 
-    <xacro:macro name="p3at_gazebo_ext">
-
-    
+    <xacro:macro name="p3at_gazebo_ext">    
         <gazebo>
             <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
                 <updateRate>100.0</updateRate>
@@ -396,4 +394,21 @@
             <origin xyz="0 0 0.4" rpy="0 0 0"/>
         </VLP-16>
     </xacro:macro>
+
+ <!-- Makes Gazebo publishing a ground truth position. -->
+  <xacro:macro name="stummel_ground_truth_pose">
+    <gazebo>  
+      <plugin name="p3d_controller" filename="libgazebo_ros_p3d.so">
+       <alwaysOn>true</alwaysOn>
+       <updateRate>100.0</updateRate>
+       <bodyName>base_link</bodyName>
+       <topicName>ground_truth_pose</topicName>
+       <frameName>/map</frameName>
+       <xyzOffsets>1 1 0</xyzOffsets> <!-- option to initialize odometry for fake localization-->
+       <rpyOffsets>0 0 0</rpyOffsets>
+      </plugin>
+    </gazebo>
+  </xacro:macro>
+
+
 </robot>
